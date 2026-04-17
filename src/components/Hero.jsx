@@ -1,45 +1,45 @@
 import React from 'react';
+// 1. Importe o novo componente (ajuste o caminho se necessário)
+import ButtonGradient from './ButtonGradient'; 
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen w-full flex flex-col items-center justify-center bg-[#121212] overflow-hidden px-6 py-20"
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-start bg-[#121212] overflow-hidden px-6 py-20"
     style={{ backgroundImage: "url('/images/hero_fundo.webp')" }}
     >
 
-      {/* 1. Texto: "hi, i am" */}
-      <p className="opacity-80 text-xl md:text-3xl tracking-[0.3em] text-center text-white uppercase mb-2">
-        hi, i am
-      </p>
+      <h3 className="opacity-80 font-bebas text-3xl md:text-6xl text-center text-white uppercase mb-2 drop-shadow-[0px_4px_0px_#DC92FF]">
+        HI, I AM
+      </h3>
 
-      {/* 2. Nome: "Carolina Pereira" */}
-      <h1 className="w-full max-w-4xl text-5xl md:text-8xl lg:text-9xl text-center text-white font-bold leading-tight mb-4 uppercase">
-        Carolina Pereira
+      <h1 className="w-full max-w-4xl font-bebas text-5xl md:text-7xl lg:text-8xl text-center text-white leading-tight mb-4 uppercase drop-shadow-[0px_4px_0px_#DC92FF]">
+        CAROLINA PEREIRA
       </h1>
 
-      {/* 3. Subtítulo: "Developer | Level 4" */}
-      <p className="text-2xl md:text-[50px] text-center text-white mb-8 font-light">
-        Developer | <span className="text-[#A192FF] font-medium">Level 4</span>
-      </p>
+      <img 
+      src="/images/developer.svg" 
+      alt="developer_level_4" 
+      className="mx-auto h-auto w-full max-w-[300px] -mt-3 md:-mt-5 mb-8"     
+      />
 
-      {/* 4. Descrição: O texto longo */}
-      <p className="max-w-4xl opacity-80 text-lg md:text-2xl text-center text-[#fffbfb] leading-relaxed mb-12">
+      <p className="font-gentium max-w-4xl opacity-80 text-lg text-[22px] text-center text-[#fffbfb] leading-relaxed mb-12">
         Aspiring Data Analyst & Frontend Developer transitioning from Textile Engineering. Skilled
         in Python and Front-end technologies, transforming complex data into accessible, user-friendly
         digital experiences.
       </p>
 
-      {/* 5. Botões: Substituímos as imagens por botões reais em código */}
-      <div className="flex flex-wrap justify-center gap-8 mb-16">
-        <button className="min-w-[203px] h-[72px] bg-white/5 border-2 border-[#A192FF]/30 rounded-[20px] text-2xl text-white uppercase hover:bg-[#A192FF]/20 transition-all cursor-pointer backdrop-blur-sm">
+
+      <div className="flex flex-wrap justify-center gap-8 mb-16 mt-[-20px]">
+        <ButtonGradient onClick={() => console.log("Quest clicado")}>
           view quest
-        </button>
-        <button className="min-w-[203px] h-[72px] bg-white/5 border-2 border-[#A192FF]/30 rounded-[20px] text-2xl text-white uppercase hover:bg-[#A192FF]/20 transition-all cursor-pointer backdrop-blur-sm">
+        </ButtonGradient>
+        
+        <ButtonGradient onClick={() => console.log("Journey clicado")}>
           view Journey
-        </button>
+        </ButtonGradient>
       </div>
 
-      {/* 6. O D20 (SVG): Centralizado e animado */}
-      <div className="w-32 h-32 md:w-[164px] md:h-[164px] text-[#A192FF] animate-pulse">
+      <div className="w-32 h-32 md:w-[150px] md:h-[150px] text-[#A192FF] animate-pulse mt-[-40px] animate-roll-down cursor-pointer">
         <svg
           viewBox="0 0 164 164"
           fill="none"

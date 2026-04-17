@@ -8,14 +8,14 @@ body {
 
 @font-face {
   font-family: 'GentiumBook';
-  src: url('./assets/fonts/gentium_book_basic.ttf') format('truetype');
+  src: url('/fonts/gentium_book_basic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Bebas Neue";
-  src: url("./assets/fonts/bebas_neue.ttf") format("truetype");
+  src: url("/fonts/bebas_neue.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -28,6 +28,7 @@ body {
 
   /*cores brilhantes*/
   --color-purple: #A192FF;
+  --color-purple-shadow: #DC92FF;
   --color-orange: #FFAC92;
   --color-blue: #6FEEFF;
   --color-green: #92FFB0;
@@ -36,4 +37,23 @@ body {
   /* tipografia */
   --font-bebas: "Bebas Neue", sans-serif;
   --font-gentium: "Gentium Book Basic", serif;
+}
+
+@keyframes rollDown {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(20px) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+.animate-roll-down {
+  animation: rollDown 4s ease-in-out infinite;
 }
