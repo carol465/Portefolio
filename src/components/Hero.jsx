@@ -1,5 +1,4 @@
 import React from 'react';
-// 1. Importe o novo componente (ajuste o caminho se necessário)
 import ButtonGradient from './ButtonGradient'; 
 
 const Hero = () => {
