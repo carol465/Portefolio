@@ -1,57 +1,73 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Hero = () => {
-  const [number, setNumber] = useState(null);
-  const [isRolling, setIsRolling] = useState(false);
-
-  const rollDice = () => {
-    setIsRolling(true);
-    setTimeout(() => {
-      setNumber(Math.floor(Math.random() * 20) + 1);
-      setIsRolling(false);
-    }, 800);
-  };
-
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4">
-      {/* Luz roxa de fundo do Figma */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#9747ff15_0%,_transparent_60%)] pointer-events-none" />
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center bg-[#121212] overflow-hidden px-6 py-20"
+    style={{ backgroundImage: "url('/images/hero_fundo.webp')" }}
+    >
 
-      <div className="z-10">
-        <h2 className="text-purple-400 tracking-[0.4em] uppercase text-sm mb-2">Hi, I am</h2>
-        <h1 className="text-6xl md:text-8xl font-black text-white mb-4">CAROLINA PEREIRA</h1>
-        <p className="text-gray-400 text-xl mb-10">
-          Data Analyst & Developer | <span className="text-purple-500 font-bold">Level 4</span>
-        </p>
+      {/* 1. Texto: "hi, i am" */}
+      <p className="opacity-80 text-xl md:text-3xl tracking-[0.3em] text-center text-white uppercase mb-2">
+        hi, i am
+      </p>
 
-        {/* Botões do Figma */}
-        <div className="flex gap-4 justify-center mb-20">
-          <button className="bg-[#9747ff] px-8 py-3 rounded-lg font-bold shadow-[0_0_20px_rgba(151,71,255,0.4)] hover:scale-105 transition-all">
-            VIEW INVENTORY
-          </button>
-          <button className="border border-gray-600 px-8 py-3 rounded-lg font-bold hover:bg-white/5 transition-all text-gray-300">
-            QUEST LOG
-          </button>
-        </div>
+      {/* 2. Nome: "Carolina Pereira" */}
+      <h1 className="w-full max-w-4xl text-5xl md:text-8xl lg:text-9xl text-center text-white font-bold leading-tight mb-4 uppercase">
+        Carolina Pereira
+      </h1>
 
-        {/* D20 Interativo */}
-        <div onClick={rollDice} className="relative cursor-pointer group inline-block">
-          <div className={`w-32 h-32 text-purple-500/60 transition-all 
-            ${isRolling ? 'animate-bounce' : 'animate-[spin_20s_linear_infinite] group-hover:text-purple-400'}`}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-              <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z" />
-              <path d="M12 22V12M12 12L22 8.5M12 12L2 8.5M12 12L12 2" />
-            </svg>
-          </div>
-          {number && !isRolling && (
-            <div className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white animate-pulse">
-              {number}
-            </div>
-          )}
-          <p className="mt-4 text-[10px] text-purple-500/40 uppercase tracking-widest font-mono">
-            {isRolling ? "Rolling..." : "Click to roll initiative"}
-          </p>
-        </div>
+      {/* 3. Subtítulo: "Developer | Level 4" */}
+      <p className="text-2xl md:text-[50px] text-center text-white mb-8 font-light">
+        Developer | <span className="text-[#A192FF] font-medium">Level 4</span>
+      </p>
+
+      {/* 4. Descrição: O texto longo */}
+      <p className="max-w-4xl opacity-80 text-lg md:text-2xl text-center text-[#fffbfb] leading-relaxed mb-12">
+        Aspiring Data Analyst & Frontend Developer transitioning from Textile Engineering. Skilled
+        in Python and Front-end technologies, transforming complex data into accessible, user-friendly
+        digital experiences.
+      </p>
+
+      {/* 5. Botões: Substituímos as imagens por botões reais em código */}
+      <div className="flex flex-wrap justify-center gap-8 mb-16">
+        <button className="min-w-[203px] h-[72px] bg-white/5 border-2 border-[#A192FF]/30 rounded-[20px] text-2xl text-white uppercase hover:bg-[#A192FF]/20 transition-all cursor-pointer backdrop-blur-sm">
+          view quest
+        </button>
+        <button className="min-w-[203px] h-[72px] bg-white/5 border-2 border-[#A192FF]/30 rounded-[20px] text-2xl text-white uppercase hover:bg-[#A192FF]/20 transition-all cursor-pointer backdrop-blur-sm">
+          view Journey
+        </button>
+      </div>
+
+      {/* 6. O D20 (SVG): Centralizado e animado */}
+      <div className="w-32 h-32 md:w-[164px] md:h-[164px] text-[#A192FF] animate-pulse">
+        <svg
+          viewBox="0 0 164 164"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-full"
+        >
+          <path
+            d="M145.721 118.729V45.2709L82 8.54169L18.2792 45.2709V118.729L82 155.458L145.721 118.729Z"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M124.059 110.871L145.721 45.2708L82 36.1825L18.2792 45.2708L39.9408 110.871L82 155.458L124.059 110.871Z"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M124.059 110.871H39.9408M124.059 110.871L82 36.1825M124.059 110.871L145.721 118.729M39.9408 110.871L82 36.1825M39.9408 110.871L18.2792 118.729M82 36.1825V8.54169"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </div>
     </section>
   );
