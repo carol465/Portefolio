@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
-body {
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; 
   margin: 0;
-  background-color: var(--bg-dark);
-  color: white;
+  padding: 0;
 }
 
 @font-face {

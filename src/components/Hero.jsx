@@ -3,23 +3,22 @@ import ButtonGradient from './ButtonGradient';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen w-full flex flex-col items-center justify-start bg-[#121212] overflow-hidden px-6 py-20"
-    style={{ backgroundImage: "url('/images/hero_fundo.webp')" }}
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-start bg-[#121212] overflow-x-hidden px-4 py-20 bg-cover bg-center"
+      style={{ backgroundImage: "url('/images/hero_fundo.webp')" }}
     >
-
-      <h3 className="opacity-80 font-bebas text-3xl md:text-6xl text-center text-white uppercase mb-2 drop-shadow-[0px_4px_0px_#DC92FF]">
+      <h3 className="w-full max-w-xs md:max-w-none opacity-80 font-bebas text-2xl md:text-6xl text-center text-white uppercase mb-2 drop-shadow-[0px_4px_0px_#DC92FF]">
         HI, I AM
       </h3>
 
-      <h1 className="w-full max-w-4xl font-bebas text-5xl md:text-7xl lg:text-8xl text-center text-white leading-tight mb-4 uppercase drop-shadow-[0px_4px_0px_#DC92FF]">
-        CAROLINA PEREIRA
+      <h1 className="w-full max-w-[95vw] md:max-w-4xl font-bebas text-4xl md:text-7xl lg:text-8xl text-center text-white leading-tight mb-4 uppercase drop-shadow-[0px_4px_0px_#DC92FF] break-words px-2">
+        Carolina Pereira
       </h1>
 
-      <img 
+    <img 
       src="/images/developer.svg" 
       alt="developer_level_4" 
-      className="mx-auto h-auto w-full max-w-[300px] -mt-3 md:-mt-5 mb-8"     
-      />
+      className="mx-auto h-auto w-full max-w-[90%] md:max-w-[300px] -mt-3 md:-mt-5 mb-8"    
+    />
 
       <p className="font-gentium max-w-4xl opacity-80 text-lg text-[22px] text-center text-[#fffbfb] leading-relaxed mb-12">
         Aspiring Data Analyst & Frontend Developer transitioning from Textile Engineering. Skilled
