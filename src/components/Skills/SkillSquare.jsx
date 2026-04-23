@@ -9,9 +9,9 @@ const SkillSquare = ({ icon }) => {
         viewBox="0 0 120 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute inset-0 z-0 pointer-events-none" // 1. Adicionado z-0 e pointer-events-none
+        className="absolute inset-0 z-0 pointer-events-none" 
       >
-        {/* Efeito de Blur (Vidro) */}
+
         <foreignObject x="0" y="0" width="120" height="120">
           <div
             xmlns="http://www.w3.org/1999/xhtml"
@@ -75,8 +75,7 @@ const SkillSquare = ({ icon }) => {
         </defs>
       </svg>
 
-      {/* 2. Conteúdo com z-10 garante que o ícone fique por cima do vidro */}
-      <div className="relative z-10 flex items-center justify-center w-full h-full p-6 text-white overflow-hidden">
+      <div className="relative z-10 flex items-center justify-center w-full h-full p-6 text-white overflow-hidden -mt-3">
         {icon}
       </div>
     </div>

@@ -6,11 +6,11 @@ const Hero = () => {
     <section className="relative min-h-screen w-full flex flex-col items-center justify-start overflow-x-hidden px-4 py-20 bg-cover bg-center"
       style={{ backgroundImage: "url('/images/hero_fundo.webp')" }}
     >
-      <h3 className="w-full max-w-xs md:max-w-none opacity-80 font-bebas text-2xl md:text-6xl text-center text-white uppercase mb-2 drop-shadow-[0px_4px_0px_#DC92FF]">
+      <h3 className="w-full max-w-xs md:max-w-none opacity-80 font-bebas text-2xl md:text-6xl text-center text-white uppercase mb-2 drop-shadow-[0px_4px_0px_#9747ff]">
         HI, I AM
       </h3>
 
-      <h1 className="w-full max-w-[95vw] md:max-w-4xl font-bebas text-4xl md:text-7xl lg:text-8xl text-center text-white leading-tight mb-4 uppercase drop-shadow-[0px_4px_0px_#DC92FF] break-words px-2">
+      <h1 className="w-full max-w-[95vw] md:max-w-4xl font-bebas text-4xl md:text-7xl lg:text-8xl text-center text-white leading-tight mb-4 uppercase drop-shadow-[0px_4px_0px_#9747ff] break-words px-2">
         Carolina Pereira
       </h1>
 
