@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Recebemos 'children' (o texto) e 'onClick' (a função) como props
 const ButtonGradient = ({ children, onClick }) => {
   return (
     <button 
@@ -23,7 +22,7 @@ const ButtonGradient = ({ children, onClick }) => {
           className="fill-[#A192FF]/20 backdrop-blur-md group-hover:fill-[#A192FF]/30 transition-colors"
         />
         
-        {/* A Borda com o Gradiente Colorido (o desenho que veio do Figma) */}
+        {/* A Borda com o Gradiente Colorido */}
         <rect
           x="1"
           y="1"

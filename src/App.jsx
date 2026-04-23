@@ -1,10 +1,11 @@
 import Hero from './components/Hero';
+import About from './components/About';
 
 function App() {
   return (
     <div className="w-full">
       <Hero />
-      {/* Depois acrescentamos as outras secções como 'Skills', 'Projetos', etc. */}
+      <About />
     </div>
   );
 }
