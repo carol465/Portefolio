@@ -2,6 +2,17 @@ import React from 'react';
 import ButtonGradient from './ButtonGradient'; 
 
 const Hero = () => {
+  const handleViewQuest = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleViewJourney = () => {
+    window.open('/CV_Carolina_Pereira_EN.pdf', '_blank');
+  };
+
   return (
     <section className="relative min-h-screen w-full flex flex-col items-center justify-start overflow-x-hidden px-4 py-20 bg-cover bg-center"
       style={{ backgroundImage: "url('/images/hero_fundo.webp')" }}
@@ -28,11 +39,11 @@ const Hero = () => {
 
 
       <div className="flex flex-wrap justify-center gap-8 mb-16 mt-[-20px]">
-        <ButtonGradient onClick={() => console.log("Quest clicado")}>
+        <ButtonGradient onClick={handleViewQuest}>
           view quest
         </ButtonGradient>
         
-        <ButtonGradient onClick={() => console.log("Journey clicado")}>
+        <ButtonGradient onClick={handleViewJourney}>
           view Journey
         </ButtonGradient>
       </div>

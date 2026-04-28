@@ -2,18 +2,17 @@ import React from 'react';
 import SkillSquare from './SkillSquare';
 import SkillPill from './SkillPill';
 
-// Componente interno para as tags de baixo (ex: Python, React)
 const SubSkillTag = ({ text }) => (
-  <div className="px-7 py-1 border-3 border-[#A192FF] bg-black/40 rounded-full backdrop-blur-sm">
-    <span className="text-[22px] font-bebas text-white">
+  <div className="px-6 py-1 border-2 border-[#A192FF] bg-black/40 rounded-full backdrop-blur-sm">
+    <span className="text-[20px] font-bebas text-white whitespace-nowrap">
       {text}
     </span>
   </div>
 );
 
-const SkillCard = ({ icon, level, subSkills = [] }) => {
+const SkillCard = ({ title, icon, level, subSkills = [] }) => {
   return (
-    <div className="relative w-[419px] h-[317px] p-8 flex flex-col justify-between overflow-hidden">
+    <div className="relative w-[419px] h-[317px] p-8 flex flex-col justify-between overflow-hidden shrink-0">
       
       <svg
         className="absolute inset-0 w-full h-full z-0 pointer-events-none"
@@ -36,15 +35,22 @@ const SkillCard = ({ icon, level, subSkills = [] }) => {
         </defs>
       </svg>
 
-      {/* 2. Conteúdo de Cima: Ícone Quadrado + Pílula INT/DEX */}
-      <div className="relative z-10 flex flex-col items-start">
-        <SkillSquare icon={icon} />
-        <div className="mt-[-22px] ml-4">
-          <SkillPill text={level} />
+      {/* Conteúdo Superior: Ícone à esquerda e Título à direita */}
+      <div className="relative z-10 flex justify-between items-start w-full">
+        <div className="flex flex-col items-start">
+          <SkillSquare icon={icon} />
+          <div className="mt-[-22px] ml-4">
+            <SkillPill text={level} />
+          </div>
         </div>
+
+        {/* Título: Alinhado à direita e com entrelinha curta (leading) */}
+        <h3 className="text-white font-bebas text-4xl mt-2 tracking-wider opacity-90 text-right leading-[0.85] uppercase">
+          {title}
+        </h3>
       </div>
 
-      {/* 3. Conteúdo de Baixo: Lista de Sub-skills (Tags) */}
+      {/* Conteúdo Inferior: Tags */}
       <div className="relative z-10 flex flex-wrap gap-2 mb-2 translate-y-4">
         {subSkills.map((sub, i) => (
           <SubSkillTag key={i} text={sub} />
