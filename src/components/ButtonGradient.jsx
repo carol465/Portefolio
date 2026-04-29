@@ -12,7 +12,6 @@ const ButtonGradient = ({ children, onClick }) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Fundo do botão com cor suave e desfoque */}
         <rect
           x="1"
           y="1"
@@ -21,8 +20,7 @@ const ButtonGradient = ({ children, onClick }) => {
           rx="19"
           className="fill-[#A192FF]/20 backdrop-blur-md group-hover:fill-[#A192FF]/30 transition-colors"
         />
-        
-        {/* A Borda com o Gradiente Colorido */}
+
         <rect
           x="1"
           y="1"
@@ -45,7 +43,6 @@ const ButtonGradient = ({ children, onClick }) => {
         </defs>
       </svg>
 
-      {/* Texto do botão */}
       <span className="font-bebas relative z-10 text-white uppercase text-3xl tracking-wider">
         {children}
       </span>

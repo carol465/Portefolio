@@ -44,13 +44,11 @@ const SkillCard = ({ title, icon, level, subSkills = [] }) => {
           </div>
         </div>
 
-        {/* Título: Alinhado à direita e com entrelinha curta (leading) */}
         <h3 className="text-white font-bebas text-4xl mt-2 tracking-wider opacity-90 text-right leading-[0.85] uppercase">
           {title}
         </h3>
       </div>
 
-      {/* Conteúdo Inferior: Tags */}
       <div className="relative z-10 flex flex-wrap gap-2 mb-2 translate-y-4">
         {subSkills.map((sub, i) => (
           <SubSkillTag key={i} text={sub} />

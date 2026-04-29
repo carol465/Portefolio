@@ -44,7 +44,6 @@ const handleEmailClick = () => {
         </button>
       </div>
 
-      {/* Grade atualizada para 3 colunas no desktop */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 pt-12 border-t border-white/5 w-full max-w-4xl">
         <SocialCard icon={<GithubIcon />} label="GitHub" link="https://github.com/carol465" />
         <SocialCard icon={<LinkedinIcon />} label="LinkedIn" link="https://www.linkedin.com/in/carolina-r-pereira" />

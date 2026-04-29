@@ -1,7 +1,7 @@
-// SkillPill.jsx
+
 import React from 'react';
 
-const SkillPill = ({ text }) => { // 1. Adicionamos a prop 'text'
+const SkillPill = ({ text }) => { 
   return (
     <div className="relative w-[70px] h-[45px] flex items-center justify-center">
       <svg
@@ -39,7 +39,6 @@ const SkillPill = ({ text }) => { // 1. Adicionamos a prop 'text'
         </defs>
       </svg>
 
-      {/* 2. Texto que aparecerá dentro da oval */}
       <span className="relative z-10 text-[30px] text-white uppercase tracking-tighter font-bebas">
         {text}
       </span>
