@@ -20,7 +20,7 @@ const About = () => {
         <div className="space-y-8 font-gentium text-white/80 opacity-90 text-lg md:text-xl leading-relaxed text-justify">
           
           <p>
-            I’m <span className="font-bold text-white">Carolina Pereira</span>, a former Textile Engineer from Portugal transitioning into the world of <span className="font-bold text-purple">Programming Development</span>. My background in R&D and process optimization taught me how to solve complex problems; now, I use code to do it at scale.
+            I’m <span className="font-bold text-white">Carolina Pereira</span>, a former Textile Engineer from Portugal transitioning into the world of <span className="font-bold text-purple">Programming Development</span>. I hold a <span className="font-bold text-white">Master’s degree in Textile Engineering</span> from the <span className="font-bold text-white">University of Minho</span>, and my background in R&D and process optimization taught me how to solve complex problems; now, I use code to do it at scale.
           </p>
 
           <p>
