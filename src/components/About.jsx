@@ -1,5 +1,3 @@
-import React from 'react';
-
 const paragraphs = [
   <>
     I'm <span className="font-bold text-white">Carolina Pereira</span>, a Textile Engineer from Portugal with a{' '}

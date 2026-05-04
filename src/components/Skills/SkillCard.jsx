@@ -1,4 +1,3 @@
-import React from 'react';
 import SkillSquare from './SkillSquare';
 import SkillPill from './SkillPill';
 
@@ -11,9 +10,11 @@ const SubSkillTag = ({ text }) => (
 );
 
 const SkillCard = ({ title, icon, level, subSkills = [] }) => {
+  const gradientId = `paint_card_border_${level}`;
+
   return (
     <div className="relative w-[419px] h-[317px] p-8 flex flex-col justify-between overflow-hidden shrink-0">
-      
+
       <svg
         className="absolute inset-0 w-full h-full z-0 pointer-events-none"
         viewBox="0 0 419 317"
@@ -22,12 +23,12 @@ const SkillCard = ({ title, icon, level, subSkills = [] }) => {
       >
         <path
           d="M20 1H399C409.493 1 418 9.50659 418 20V297C418 307.493 409.493 316 399 316H20C9.50659 316 1 307.493 1 297V20C1 9.50659 9.50659 1 20 1Z"
-          stroke="url(#paint_card_border)"
+          stroke={`url(#${gradientId})`}
           strokeOpacity="0.4"
           strokeWidth="2"
         />
         <defs>
-          <linearGradient id="paint_card_border" x1="0" y1="0" x2="419" y2="317" gradientUnits="userSpaceOnUse">
+          <linearGradient id={gradientId} x1="0" y1="0" x2="419" y2="317" gradientUnits="userSpaceOnUse">
             <stop stopColor="#A192FF" />
             <stop offset="0.5" stopColor="#6FEEFF" />
             <stop offset="1" stopColor="#FF929F" />
@@ -50,8 +51,8 @@ const SkillCard = ({ title, icon, level, subSkills = [] }) => {
       </div>
 
       <div className="relative z-10 flex flex-wrap gap-2 mb-2 translate-y-4">
-        {subSkills.map((sub, i) => (
-          <SubSkillTag key={i} text={sub} />
+        {subSkills.map((sub) => (
+          <SubSkillTag key={sub} text={sub} />
         ))}
       </div>
       

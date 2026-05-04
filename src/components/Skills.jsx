@@ -1,4 +1,3 @@
-import React from 'react';
 import SkillCard from './Skills/SkillCard';
 import { BookOpen, BowArrow, Handshake, ScrollText, Swords, Shield } from 'lucide-react';
 
@@ -50,15 +49,15 @@ return (
         <span className="text-purple">Skills</span>
       </h2>
 
-      <img 
-        src="/images/skills.svg" 
-        alt="skills" 
-        className="mx-auto h-auto w-full max-w-[90%] md:max-w-[1000px] mb-16"    
+      <img
+        src="/images/skills.svg"
+        alt="Decorative illustration for the Technical Skills section"
+        className="mx-auto h-auto w-full max-w-[90%] md:max-w-[1000px] mb-16"
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-0 max-w-[1200px] justify-items-center">
-        {skillsData.map((skill, index) => (
-          <div key={index} className="transform scale-75 md:scale-90 origin-center">
+        {skillsData.map((skill) => (
+          <div key={skill.level} className="transform scale-75 md:scale-90 origin-center">
             <SkillCard 
               title={skill.title}
               icon={skill.icon} 
