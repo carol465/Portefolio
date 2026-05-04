@@ -6,13 +6,21 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="w-full">
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </div>
+    <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#9747ff] focus:text-white focus:rounded-lg focus:font-bebas focus:text-xl"
+      >
+        Skip to main content
+      </a>
+      <main id="main-content" className="w-full">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+    </>
   );
 }
 

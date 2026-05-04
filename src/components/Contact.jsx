@@ -2,15 +2,7 @@ import { Mail, Send, CheckCircle } from 'lucide-react';
 
 const Contact = () => {
   const yourEmail = "carolina.r.pereira98@gmail.com";
-
-const handleEmailClick = () => {
-  const subject = encodeURIComponent("Contato via Portfólio");
-  const body = encodeURIComponent("Olá Carolina, ...");
-  
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${yourEmail}&su=${subject}&body=${body}`;
-  
-  window.open(gmailUrl, '_blank');
-};
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${yourEmail}&su=${encodeURIComponent("Contato via Portfólio")}&body=${encodeURIComponent("Olá Carolina, ...")}`;
 
   const GithubIcon = () => (
     <svg role="img" viewBox="0 0 24 24" fill="currentColor" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -31,23 +23,28 @@ const handleEmailClick = () => {
         <span className="text-purple">TOUCH</span>
         </h2>
 
-      <img 
-        src="/images/contact.svg" 
-        alt="contact" 
-        className="mx-auto h-auto w-full max-w-[90%] md:max-w-[1000px] mb-16"    
+      <img
+        src="/images/contact.svg"
+        alt="Decorative illustration for the Get In Touch section"
+        className="mx-auto h-auto w-full max-w-[90%] md:max-w-[1000px] mb-16"
       />
 
       <div className="flex justify-center mb-12">
-        <button onClick={handleEmailClick} className="flex items-center font-bebas gap-3 bg-violet hover:bg-purple transition-all px-8 py-4 rounded-xl text-xl shadow-lg">
-          <Send className="w-5 h-5 -rotate-45" />
+        <a
+          href={gmailUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center font-bebas gap-3 bg-violet hover:bg-purple transition-all px-8 py-4 rounded-xl text-xl shadow-lg"
+        >
+          <Send className="w-5 h-5 -rotate-45" aria-hidden="true" />
           Send Me an Email
-        </button>
+        </a>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 pt-12 border-t border-white/5 w-full max-w-4xl">
         <SocialCard icon={<GithubIcon />} label="GitHub" link="https://github.com/carol465" />
         <SocialCard icon={<LinkedinIcon />} label="LinkedIn" link="https://www.linkedin.com/in/carolina-r-pereira" />
-        <SocialCard icon={<Mail />} label="Email" onClick={handleEmailClick} />
+        <SocialCard icon={<Mail aria-hidden="true" />} label="Email" link={gmailUrl} />
       </div>
     </section>
   );

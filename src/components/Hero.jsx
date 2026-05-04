@@ -1,18 +1,6 @@
-import React from 'react';
-import ButtonGradient from './ButtonGradient'; 
+import ButtonGradient from './ButtonGradient';
 
 const Hero = () => {
-  const handleViewQuest = () => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleViewJourney = () => {
-    window.open('/CV_Carolina_Pereira_EN.pdf', '_blank');
-  };
-
   return (
     <section className="relative min-h-screen w-full flex flex-col items-center justify-start overflow-x-hidden px-4 py-20 bg-cover bg-center"
       style={{ backgroundImage: "url('/images/hero_fundo.webp')" }}
@@ -25,11 +13,11 @@ const Hero = () => {
         Carolina Pereira
       </h1>
 
-    <img 
-      src="/images/developer.svg" 
-      alt="developer_level_4" 
-      className="mx-auto h-auto w-full max-w-[90%] md:max-w-[300px] -mt-3 md:-mt-5 mb-8"    
-    />
+      <img
+        src="/images/developer.svg"
+        alt="Badge showing Developer Level 4"
+        className="mx-auto h-auto w-full max-w-[90%] md:max-w-[300px] -mt-3 md:-mt-5 mb-8"
+      />
 
       <p className="font-gentium max-w-4xl opacity-80 text-lg text-[22px] text-center text-[#fffbfb] leading-relaxed mb-12">
         Aspiring Data Analyst & Frontend Developer transitioning from Textile Engineering. Skilled
@@ -37,22 +25,26 @@ const Hero = () => {
         digital experiences.
       </p>
 
-
       <div className="flex flex-wrap justify-center gap-8 mb-16 mt-[-20px]">
-        <ButtonGradient onClick={handleViewQuest}>
+        <ButtonGradient href="#projects">
           view quest
         </ButtonGradient>
-        
-        <ButtonGradient onClick={handleViewJourney}>
+
+        <ButtonGradient href="/CV_Carolina_Pereira_EN.pdf" target="_blank" rel="noopener noreferrer">
           view Journey
         </ButtonGradient>
       </div>
 
-      <div className="w-32 h-32 md:w-[150px] md:h-[150px] text-[#A192FF] animate-pulse mt-[-40px] animate-roll-down cursor-pointer">
+      <a
+        href="#about"
+        aria-label="Scroll to About section"
+        className="w-32 h-32 md:w-[150px] md:h-[150px] text-[#A192FF] animate-pulse mt-[-40px] animate-roll-down focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9747ff] rounded-sm"
+      >
         <svg
           viewBox="0 0 164 164"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
           className="w-full h-full"
         >
           <path
@@ -77,7 +69,7 @@ const Hero = () => {
             strokeLinejoin="round"
           />
         </svg>
-      </div>
+      </a>
     </section>
   );
 };

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const About = () => {
   return (
     <section id="about" className="min-h-screen w-full bg-dark text-white flex flex-col items-center py-20 px-6">
@@ -9,10 +7,10 @@ const About = () => {
         </h2>
     
 
-      <img 
-        src="/images/about.svg" 
-        alt="about" 
-        className="mx-auto h-auto w-full max-w-[90%] md:max-w-[1000px] mb-16"    
+      <img
+        src="/images/about.svg"
+        alt="Decorative illustration for the About section"
+        className="mx-auto h-auto w-full max-w-[90%] md:max-w-[1000px] mb-16"
       />
 
       <div className="w-full max-w-4xl bg-white/3 border border-white/10 backdrop-blur-md rounded-[32px] p-8 md:p-12 shadow-2xl">

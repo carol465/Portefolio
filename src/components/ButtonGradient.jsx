@@ -1,10 +1,10 @@
-import React from 'react';
-
-const ButtonGradient = ({ children, onClick }) => {
+const ButtonGradient = ({ children, href, ...props }) => {
+  const Tag = href ? 'a' : 'button';
   return (
-    <button 
-      onClick={onClick}
+    <Tag
+      href={href}
       className="relative group min-w-[203px] h-[72px] flex items-center justify-center transition-all active:scale-95 cursor-pointer"
+      {...props}
     >
       <svg
         className="absolute inset-0 w-full h-full"
@@ -46,7 +46,7 @@ const ButtonGradient = ({ children, onClick }) => {
       <span className="font-bebas relative z-10 text-white uppercase text-3xl tracking-wider">
         {children}
       </span>
-    </button>
+    </Tag>
   );
 };
 

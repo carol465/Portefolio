@@ -1,7 +1,10 @@
+import { useId } from 'react';
 
-import React from 'react';
+const SkillPill = ({ text }) => {
+  const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
+  const bgId = `pill_bg_${uid}`;
+  const borderId = `pill_border_${uid}`;
 
-const SkillPill = ({ text }) => { 
   return (
     <div className="relative w-[70px] h-[45px] flex items-center justify-center">
       <svg
@@ -25,15 +28,15 @@ const SkillPill = ({ text }) => {
           ></div>
         </foreignObject>
 
-        <rect x="0.7" y="0.7" width="68.6" height="43.6" rx="21.8" fill="url(#pill_bg_gradient)" fillOpacity="0.6" />
-        <rect x="0.7" y="0.7" width="68.6" height="43.6" rx="21.8" stroke="url(#pill_border_gradient)" strokeWidth="1.4" />
+        <rect x="0.7" y="0.7" width="68.6" height="43.6" rx="21.8" fill={`url(#${bgId})`} fillOpacity="0.6" />
+        <rect x="0.7" y="0.7" width="68.6" height="43.6" rx="21.8" stroke={`url(#${borderId})`} strokeWidth="1.4" />
 
         <defs>
-          <linearGradient id="pill_bg_gradient" x1="-3.96716" y1="-7.70777e-07" x2="49.0174" y2="73.3872" gradientUnits="userSpaceOnUse">
+          <linearGradient id={bgId} x1="-3.96716" y1="-7.70777e-07" x2="49.0174" y2="73.3872" gradientUnits="userSpaceOnUse">
             <stop stopColor="#A192FF" />
             <stop offset="0.985577" stopColor="white" stopOpacity="0" />
           </linearGradient>
-          <linearGradient id="pill_border_gradient" x1="-3.09836" y1="2.59944e-07" x2="24.8873" y2="36.137" gradientUnits="userSpaceOnUse">
+          <linearGradient id={borderId} x1="-3.09836" y1="2.59944e-07" x2="24.8873" y2="36.137" gradientUnits="userSpaceOnUse">
             <stop stopColor="#FFAC92" /><stop offset="0.5" stopColor="#A192FF" /><stop offset="0.75" stopColor="#6FEEFF" /><stop offset="1" stopColor="#FF929F" />
           </linearGradient>
         </defs>

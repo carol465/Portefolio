@@ -1,6 +1,10 @@
-import React from 'react';
+import { useId } from 'react';
 
 const SkillSquare = ({ icon }) => {
+  const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
+  const bgId = `square_bg_${uid}`;
+  const borderId = `square_border_${uid}`;
+
   return (
     <div className="relative w-[120px] h-[120px] flex items-center justify-center">
       <svg
@@ -9,7 +13,7 @@ const SkillSquare = ({ icon }) => {
         viewBox="0 0 120 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute inset-0 z-0 pointer-events-none" 
+        className="absolute inset-0 z-0 pointer-events-none"
       >
 
         <foreignObject x="0" y="0" width="120" height="120">
@@ -20,7 +24,7 @@ const SkillSquare = ({ icon }) => {
               width: '100%',
               height: '100%',
               borderRadius: '19.3px',
-              backgroundColor: 'rgba(161, 146, 255, 0.1)' 
+              backgroundColor: 'rgba(161, 146, 255, 0.1)'
             }}
           ></div>
         </foreignObject>
@@ -31,7 +35,7 @@ const SkillSquare = ({ icon }) => {
           width="118.6"
           height="118.6"
           rx="19.3"
-          fill="url(#square_bg_gradient)"
+          fill={`url(#${bgId})`}
           fillOpacity="0.6"
         />
 
@@ -41,13 +45,13 @@ const SkillSquare = ({ icon }) => {
           width="118.6"
           height="118.6"
           rx="19.3"
-          stroke="url(#square_border_gradient)"
+          stroke={`url(#${borderId})`}
           strokeWidth="1.4"
         />
 
         <defs>
           <linearGradient
-            id="square_bg_gradient"
+            id={bgId}
             x1="-6.80085"
             y1="-2.05541e-06"
             x2="141.057"
@@ -59,7 +63,7 @@ const SkillSquare = ({ icon }) => {
           </linearGradient>
 
           <linearGradient
-            id="square_border_gradient"
+            id={borderId}
             x1="-5.31148"
             y1="6.93185e-07"
             x2="70.4512"
