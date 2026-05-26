@@ -1,19 +1,29 @@
 const paragraphs = [
   <>
-    I'm <span className="font-bold text-white">Carolina Pereira</span>, a Textile Engineer from Portugal with a{' '}
-    <span className="font-bold text-white">Master's degree from the University of Minho</span>, now building a career in{' '}
-    <span className="font-bold text-purple">Software Development</span>. Years of R&D and process optimization taught me
+    I'm <span className="text-white">Carolina Pereira</span>, a Textile Engineer from Portugal with a{' '}
+    <span className="text-white">Master's degree from the University of Minho</span>, now building a career in{' '}
+    <span className="text-purple">Software Development</span>. Years of R&D and process optimization taught me
     how to break down complex problems — I just do it with code now.
   </>,
   <>
-    I've completed a <span className="text-purple font-medium">1,200+ hour</span> software development programme, where I
-    built a solid foundation in <span className="font-bold text-purple">Python, SQL, ASP.NET and C#</span>, alongside
-    front-end technologies like <span className="font-bold text-purple">React, HTML and Tailwind CSS</span>. Every project
+    My engineering path spans <span className="text-white">6 years</span>: a Master's at Minho (2016–2022)
+    focused on textile materials and product development, followed by{' '}
+    <span className="text-white">2+ years as a Textile Engineer at Lameirinho</span>. There I optimized dyeing
+    processes for <span className="text-purple">32 production batches</span>, achieving an{' '}
+    <span className="text-purple">18% improvement in reproducibility</span> between lab and production scales,
+    and provided technical support to{' '}
+    <span className="text-purple">5 textile startups</span> through the{' '}
+    <em>Test Beds — Textile of the Future</em> initiative.
+  </>,
+  <>
+    I've completed a <span className="text-purple">1,200+ hour</span> software development programme, where I
+    built a solid foundation in <span className="text-purple">Python, SQL, ASP.NET and C#</span>, alongside
+    front-end technologies like <span className="text-purple">React, HTML and Tailwind CSS</span>. Every project
     I take on, I bring the same rigour I applied in engineering.
   </>,
   <>
     What drives me is turning messy, complex data into something{' '}
-    <span className="font-bold text-purple">clear and actionable</span>. I'm methodical by nature and resilient by
+    <span className="text-purple">clear and actionable</span>. I'm methodical by nature and resilient by
     experience — two things that transfer well from the factory floor to the codebase.
   </>,
 ];
