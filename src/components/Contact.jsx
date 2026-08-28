@@ -46,6 +46,21 @@ const Contact = () => {
         <SocialCard icon={<LinkedinIcon />} label="LinkedIn" link="https://www.linkedin.com/in/carolina-r-pereira" />
         <SocialCard icon={<Mail aria-hidden="true" />} label="Email" link={gmailUrl} />
       </div>
+
+      <div className="flex justify-center mt-10">
+        <a
+          target="_blank"
+          href="https://www.zaask.pt/user/carolinarpereira98"
+          rel="noopener noreferrer"
+          aria-label="Ver perfil no Zaask"
+        >
+          <img
+            src="https://www.zaask.pt/widget?user=1056211&widget=badge"
+            alt="Zaask Profissional Prata"
+            className="h-16 hover:opacity-80 transition-opacity duration-200"
+          />
+        </a>
+      </div>
     </section>
   );
 };
